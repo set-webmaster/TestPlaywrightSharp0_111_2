@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="PlaywrightSharp" Version="0.111.2" />
+    <PackageReference Include="PlaywrightSharp.Chromium" Version="0.10.3" />
   </ItemGroup>
 
 </Project>

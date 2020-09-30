@@ -72,7 +72,7 @@ namespace TestPlaywrightSharp111_2.OptionsClasses
         /// <summary>
         /// Paper margins, defaults to none.
         /// </summary>
-        public Margin Margin { get; set; } = null;
+        //public Margin Margin { get; set; } = null;
 
         /// <summary>
         /// Give any CSS <c>@page</c> size declared in the page priority over what is declared in <c>width</c> and <c>height</c> or <c>format</c> options.
@@ -115,7 +115,7 @@ namespace TestPlaywrightSharp111_2.OptionsClasses
                    EqualityComparer<PaperFormat>.Default.Equals(Format, options.Format) &&
                    EqualityComparer<object>.Default.Equals(Width, options.Width) &&
                    EqualityComparer<object>.Default.Equals(Height, options.Height) &&
-                   EqualityComparer<Margin>.Default.Equals(Margin, options.Margin) &&
+                   //EqualityComparer<Margin>.Default.Equals(Margin, options.Margin) &&
                    PreferCSSPageSize == options.PreferCSSPageSize;
 
         /// <inheritdoc cref="object.GetHashCode"/>
@@ -131,7 +131,7 @@ namespace TestPlaywrightSharp111_2.OptionsClasses
                 ^ EqualityComparer<PaperFormat>.Default.GetHashCode(Format)
                 ^ EqualityComparer<object>.Default.GetHashCode(Width)
                 ^ EqualityComparer<object>.Default.GetHashCode(Height)
-                ^ EqualityComparer<Margin>.Default.GetHashCode(Margin)
+                //^ EqualityComparer<Margin>.Default.GetHashCode(Margin)
                 ^ PreferCSSPageSize.GetHashCode();
     }
 
