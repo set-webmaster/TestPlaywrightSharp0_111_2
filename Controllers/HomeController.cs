@@ -30,14 +30,22 @@ namespace TestPlaywrightSharp111_2.Controllers
             });
 
             var page = await browser.NewPageAsync();
-
-
+            
             var htmlContent = await System.IO.File.ReadAllTextAsync("wwwroot/testPage.html");
-
             await page.SetContentAsync(htmlContent, LifecycleEvent.Load);
 
+            var headerTemplate = @"<!DOCTYPE html>
+                <html>
+                    <head>
+                        <title>FooterTemplate</title>
+                    </head>
+                    <body>
+                        <div>Test header template</div>
+                    </body>
+                </html>";
 
-            var bytesResponse = await page.GetPdfAsync(null, 1, true, "<div>Test header template</div>", "<div>Test footer template</div>", true, false, "", null,
+
+            var bytesResponse = await page.GetPdfAsync(null, 1, true, headerTemplate, "<div>Test footer template</div>", true, false, "", null,
                 null, null, new Margin { Bottom = "1in", Top = "2in" }, false);
 
             FileResult fileResult = new FileContentResult(bytesResponse, "application/pdf");
