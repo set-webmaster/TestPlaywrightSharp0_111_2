@@ -38,6 +38,7 @@ namespace TestPlaywrightSharp111_2.Controllers
                 <html>
                     <head>
                         <title>FooterTemplate</title>
+                        <style>bodye { font-size: 16px; color: lightblue;}</style>
                     </head>
                     <body>
                         <div>Test header template</div>
